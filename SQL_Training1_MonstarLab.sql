@@ -13,7 +13,7 @@ create table `categories`(
 create table `companies`(
 	id bigint primary key auto_increment not null, 
     company_name varchar(50) not null, 
-	company_code varchar(100) unique not null, 
+	company_code varchar(255) unique not null, 
     created_at timestamp default current_timestamp not null, 
 	updated_at timestamp default current_timestamp not null
 );
@@ -24,7 +24,7 @@ create table `users`(
 	email varchar(50) unique not null, 
     password varchar(10) not null, 
     birthday date, 
-    image_url varchar(100), 
+    image_url varchar(255), 
     role enum('user',  'admin') default('user') not null, 
     created_at timestamp default current_timestamp not null, 
 	updated_at timestamp default current_timestamp not null
